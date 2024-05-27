@@ -1,11 +1,11 @@
-# 🏗 Scaffold-ETH 2
+# USDC Cross-Chain Hoarding
 
 <h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
+  <a href="https://docs.scaffoldeth.io">Repo</a> |
   <a href="https://scaffoldeth.io">Website</a>
 </h4>
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+🧪 A MHGN Hoarder Labs project for ChainLink's Block Magic Hackathon..
 
 ⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
 
@@ -79,3 +79,21 @@ To know more about its features, check out our [website](https://scaffoldeth.io)
 We welcome contributions to Scaffold-ETH 2!
 
 Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+
+Github pushing
+Git Hub Staging, Commiting, Pushing //Commands for updating repo on github(Build this out)
+
+//Check remote origin
+
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+
+git remote -v
+
+git add . //adds modified files to commit# mhgn-hoarding-gateway
+
+git commit -m "update from local" // Commit your changes to be pushed to repo
+
+Use the --no-verify option to skip git commit hooks, e.g. git commit -m "commit message" --no-verify . When the --no-verify option is used, the pre-commit and commit-msg hooks are bypassed. Copied! You can also use the -n option, which is short for --no-verify .
+
+git push //push to repo //Push updates to repo (main)
+
