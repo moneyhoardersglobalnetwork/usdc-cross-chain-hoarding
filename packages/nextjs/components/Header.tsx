@@ -20,6 +20,11 @@ export const menuLinks: HeaderMenuLink[] = [
     href: "/",
   },
   {
+    label: "USDC Cross-Chain Hoarding",
+    href: "/usdc-cross-chain-hoarding",
+    icon: <BugAntIcon className="h-4 w-4" />,
+  },
+  {
     label: "Debug Contracts",
     href: "/debug",
     icon: <BugAntIcon className="h-4 w-4" />,
