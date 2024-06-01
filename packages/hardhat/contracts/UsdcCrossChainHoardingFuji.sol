@@ -15,7 +15,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 after hoarder approves contract to transfer USDC tokens.
 Hoarders will be able to easily tranfer & hoard their USDC tokens across supported networks
  and earn rewards for hoarding USDC tokens. */
-contract UsdcCrossChainHoardingAmoy is  ReentrancyGuard {
+contract UsdcCrossChainHoardingFuji is  ReentrancyGuard {
     using SafeERC20 for IERC20;
 
     struct Hoarder {
@@ -71,10 +71,10 @@ contract UsdcCrossChainHoardingAmoy is  ReentrancyGuard {
     
 
     // https://developers.circle.com/stablecoins/docs/usdc-on-test-networks
-    address usdcAddress = 0x41E94Eb019C0762f9Bfcf9Fb1E58725BfB0e7582;
+    address usdcAddress = 0x5425890298aed601595a70AB815c96711a31Bc65;
 
     // https://docs.chain.link/ccip/supported-networks/v1_2_0/testnet#ethereum-sepolia
-    uint64 _destinationChainSelector = 16015286601757825753; // Sepolia
+    uint64 _destinationChainSelector = 16281711391670634445; // Amoy
 
     event UsdcTransferred(
         bytes32 messageId,
@@ -91,7 +91,7 @@ contract UsdcCrossChainHoardingAmoy is  ReentrancyGuard {
         owner = msg.sender;
         ccipRouter = IRouterClient(router);
         linkToken = IERC20(link);
-        usdcToken = IERC20(usdcAddress);  // USDC address Amoy
+        usdcToken = IERC20(usdcAddress);  // USDC address Fuji
     }
 
     /// @dev Modifier that checks if the chain with the given destinationChainSelector is allowlisted.
@@ -120,7 +120,7 @@ contract UsdcCrossChainHoardingAmoy is  ReentrancyGuard {
         allowlistedChains[_destinationChainSelector] = allowed;
     }
 
-     function transferUsdcToSepolia(
+     function transferUsdcToAmoy(
         address _receiver,
         uint256 _amount
     )

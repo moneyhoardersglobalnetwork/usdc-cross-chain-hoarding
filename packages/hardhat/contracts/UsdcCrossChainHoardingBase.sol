@@ -91,7 +91,7 @@ contract UsdcCrossChainHoardingBase is  ReentrancyGuard {
         owner = msg.sender;
         ccipRouter = IRouterClient(b_router);
         linkToken = IERC20(b_link);
-        usdcToken = IERC20(usdcAddress);  // USDC address Sepolia
+        usdcToken = IERC20(usdcAddress);  // USDC address Base Sepolia
     }
 
     /// @dev Modifier that checks if the chain with the given destinationChainSelector is allowlisted.

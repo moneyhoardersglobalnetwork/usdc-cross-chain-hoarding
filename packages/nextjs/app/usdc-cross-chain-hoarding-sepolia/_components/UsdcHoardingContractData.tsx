@@ -34,25 +34,25 @@ export const UsdcHoardingContractData = () => {
   });
 
   const { data: hoardingBalance } = useScaffoldReadContract({
-    contractName: "UsdcCrossChainHoardingBase",
+    contractName: "UsdcCrossChainHoarding",
     functionName: "Check_Usdc_Hoarded_Balance",
     args: [address],
   });
 
   const { data: calculateReward } = useScaffoldReadContract({
-    contractName: "UsdcCrossChainHoardingBase",
+    contractName: "UsdcCrossChainHoarding",
     functionName: "calculateReward",
     args: [address],
   });
 
   const { data: GetHoardingingTimeInSeconds } = useScaffoldReadContract({
-    contractName: "UsdcCrossChainHoardingBase",
+    contractName: "UsdcCrossChainHoarding",
     functionName: "GetHoardingingTimeInSeconds",
     args: [address],
   });
 
   const { data: totalHoarded } = useScaffoldReadContract({
-    contractName: "UsdcCrossChainHoardingBase",
+    contractName: "UsdcCrossChainHoarding",
     functionName: "hoarders",
     args: [address],
   });
@@ -63,22 +63,22 @@ export const UsdcHoardingContractData = () => {
   });
 
   const { data: Total_Hoarders } = useScaffoldReadContract({
-    contractName: "UsdcCrossChainHoardingBase",
+    contractName: "UsdcCrossChainHoarding",
     functionName: "Total_Hoarders",
   });
 
   const { data: Total_Reward_Pool } = useScaffoldReadContract({
-    contractName: "UsdcCrossChainHoardingBase",
+    contractName: "UsdcCrossChainHoarding",
     functionName: "Total_Reward_Pool",
   });
 
   const { data: hoarded } = useScaffoldReadContract({
-    contractName: "UsdcCrossChainHoardingBase",
+    contractName: "UsdcCrossChainHoarding",
     functionName: "totalHoarded",
   });
 
   useScaffoldWatchContractEvent({
-    contractName: "UsdcCrossChainHoardingBase",
+    contractName: "UsdcCrossChainHoarding",
     eventName: "Hoarded",
     listener: logs => {
       logs.map(log => {
@@ -93,7 +93,7 @@ export const UsdcHoardingContractData = () => {
     isLoading: isLoadingEvents,
     error: errorReadingEvents,
   } = useScaffoldEventHistory({
-    contractName: "UsdcCrossChainHoardingBase",
+    contractName: "UsdcCrossChainHoarding",
     eventName: "Hoarded",
     fromBlock: process.env.NEXT_PUBLIC_DEPLOY_BLOCK ? BigInt(process.env.NEXT_PUBLIC_DEPLOY_BLOCK) : 0n,
     filters: { user: address },
@@ -102,8 +102,8 @@ export const UsdcHoardingContractData = () => {
 
   console.log("Events:", isLoadingEvents, errorReadingEvents, hoardedEvents);
 
-  const { data: usdcCrossChainHoardingBase } = useScaffoldContract({ contractName: "UsdcCrossChainHoardingBase" });
-  console.log("usdcCrossChainHoardingBase: ", usdcCrossChainHoardingBase);
+  const { data: UsdcCrossChainHoarding } = useScaffoldContract({ contractName: "UsdcCrossChainHoarding" });
+  console.log("UsdcCrossChainHoarding: ", UsdcCrossChainHoarding);
 
   return (
     <div className="flex flex-col justify-center items-center bg-[url('/assets/background.jpeg')] bg-[length:100%_100%] py-10 px-5 sm:px-0 lg:py-auto max-w-[100vw] ">

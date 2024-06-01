@@ -1,13 +1,30 @@
 # USDC Cross-Chain Hoarding
 
 <h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Repo</a> |
+  <a href="https://github.com/moneyhoardersglobalnetwork/usdc-cross-chain-hoarding">Repo</a> |
   <a href="https://scaffoldeth.io">Website</a>
 </h4>
 
 🧪 A MHGN Hoarder Labs project for ChainLink's Block Magic Hackathon..
 
-⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
+This application is a cross-chain hoarding application that allows users to deposit USDC into a smart contract and earn 6% APY then withdraw USDC and rewards from the smart contract to their wallet.
+
+Users can also tranfer USDC cross-chain to other wallets. Using ChainLink's CCIP protocol, users can now hoard USDC on Polygon Amoy, Avalanche Fuji, Ethereum Sepolia, and maybe more once the contracts go live on Polygon and Avalanche.
+
+USDC has been adopted as the primary currency on the MHGN ecosystem second to MHDG and is the most popular stablecoin on the market. MHGD or Money Hoarders Global Dollars is the native token of the MHGN ecosystem. MHGD will be minted using USDC and DAI on Polygon Amoy, Avalanche Fuji, Ethereum Sepolia and Base Sepolia.
+
+The MHGD mint contracts allow users to swap their USDC or DAI for MHGD.
+The mint contract does not use CCIP only the USDCCrossChainHoarding.sol contracts use CCIP.
+We split code into four contracts for each network so frontend is only configured to one network.
+
+MHGD will be paired to BOP by MHGN and other assets creating the ability to exchange values across the MHGN ecosystem. For use cases like gaming, MHGD can be used to buy in-game items, or for other use cases like buying NFTs.
+
+Eventually MHGD and BOP will be transferable across different network ecosystems.
+
+
+
+
+⚙️ Built using Scaffold-Eth-2, NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
 
 - ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
 - 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.

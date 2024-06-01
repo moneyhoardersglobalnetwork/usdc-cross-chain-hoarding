@@ -21,12 +21,14 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   */
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
-  const _router = "0x0BF3dE8c5D3e8A2B34D2BEeB17ABfCeBaf363A59"; // Sepolia router
-  const _link = "0x779877A7B0D9E8603169DdbD7836e478b4624789"; // Sepolia link 
-  const router = "0x9C32fCB86BF0f4a1A8921a9Fe46de3198bb884B2"; // Amoy router
-  const link = "0x0Fd9e8d3aF1aaee056EB9e802c3A762a667b1904"; // Amoy link  
-  const b_router = "0xD3b06cEbF099CE7DA4AcCf578aaebFDBd6e88a93"; // Base Sepolia router
-  const b_link = "0xE4aB69C077896252FAFBD49EFD26B5D171A32410"; // Base Sepolia link                                                                                                                                                                                                                                                               
+  //const _router = "0x0BF3dE8c5D3e8A2B34D2BEeB17ABfCeBaf363A59"; // Sepolia router
+  //const _link = "0x779877A7B0D9E8603169DdbD7836e478b4624789"; // Sepolia link 
+  //const router = "0x9C32fCB86BF0f4a1A8921a9Fe46de3198bb884B2"; // Amoy router
+  //const link = "0x0Fd9e8d3aF1aaee056EB9e802c3A762a667b1904"; // Amoy link  
+  const router = "0xF694E193200268f9a4868e4Aa017A0118C9a8177"; // Fuji router
+  const link = "0x0b9d5D9136855f6FEc3c0993feE6E9CE8a297846"; // Fuji link  
+  //const b_router = "0xD3b06cEbF099CE7DA4AcCf578aaebFDBd6e88a93"; // Base Sepolia router
+  //const b_link = "0xE4aB69C077896252FAFBD49EFD26B5D171A32410"; // Base Sepolia link                                                                                                                                                                                                                                                               
 /*
   await deploy("UsdcCrossChainHoarding", {
     from: deployer,
@@ -57,11 +59,21 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
     // automatically mining the contract deployment transaction. There is no effect on live networks.
     autoMine: true,
   });
-*/
+
   await deploy("IERC20", {
     from: deployer,
     // Contract constructor arguments
     args: [],
+    log: true,
+    // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
+    // automatically mining the contract deployment transaction. There is no effect on live networks.
+    autoMine: true,
+  });
+  */
+  await deploy("UsdcCrossChainHoardingFuji", {
+    from: deployer,
+    // Contract constructor arguments
+    args: [router, link],
     log: true,
     // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
     // automatically mining the contract deployment transaction. There is no effect on live networks.

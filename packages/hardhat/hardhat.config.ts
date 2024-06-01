@@ -15,8 +15,8 @@ import "hardhat-deploy-ethers";
 const providerApiKey = process.env.ALCHEMY_API_KEY || "wL0YrXJoCW4zXJeNds22I33_PiE8R-Gm";
 // If not set, it uses the hardhat account 0 private key.
 const deployerPrivateKey =
-  process.env.DEPLOYER_PRIVATE_KEY ?? "add later";
-// If not set, it uses ours Etherscan default API key.
+  process.env.DEPLOYER_PRIVATE_KEY ?? "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80";
+// If not set, it uses ours Etherscan default API key. Use .env file to set it.
 const etherscanApiKey = process.env.ETHERSCAN_API_KEY || "S93YCV2GH2YIAAY1CAH5QYYP4QKZJDYRUB";
 
 const COMPILER_SETTINGS = {

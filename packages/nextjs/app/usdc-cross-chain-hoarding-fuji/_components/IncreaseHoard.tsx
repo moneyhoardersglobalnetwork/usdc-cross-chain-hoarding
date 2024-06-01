@@ -7,7 +7,7 @@ import { useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 export const IncreaseHoard = () => {
   const [visible, setVisible] = useState(true);
   const [amount, setAmount] = useState<string | undefined>(undefined);
-  const { writeContractAsync } = useScaffoldWriteContract("UsdcCrossChainHoardingBase");
+  const { writeContractAsync } = useScaffoldWriteContract("UsdcCrossChainHoardingAmoy");
 
   return (
     <div className="flex bg-[url('/assets/background.jpeg')] relative pb-10">

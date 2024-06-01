@@ -20,8 +20,18 @@ export const menuLinks: HeaderMenuLink[] = [
     href: "/",
   },
   {
-    label: "USDC Cross-Chain Hoarding",
-    href: "/usdc-cross-chain-hoarding",
+    label: "Amoy Testnet",
+    href: "/usdc-cross-chain-hoarding-amoy",
+    icon: <BugAntIcon className="h-4 w-4" />,
+  },
+  {
+    label: "Fuji Testnet",
+    href: "/usdc-cross-chain-hoarding-fuji",
+    icon: <BugAntIcon className="h-4 w-4" />,
+  },
+  {
+    label: "Sepolia Testnet",
+    href: "/usdc-cross-chain-hoarding-sepolia",
     icon: <BugAntIcon className="h-4 w-4" />,
   },
   {

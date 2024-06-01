@@ -3,18 +3,18 @@
 import { useState } from "react";
 import { ArrowSmallRightIcon } from "@heroicons/react/24/outline";
 import { useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
-import React from "react";
 
-export const Hoard = () => {
+export const IncreaseHoard = () => {
   const [visible, setVisible] = useState(true);
   const [amount, setAmount] = useState<string | undefined>(undefined);
-  const { writeContractAsync } = useScaffoldWriteContract("UsdcCrossChainHoardingBase");
+  const { writeContractAsync } = useScaffoldWriteContract("UsdcCrossChainHoardingAmoy");
 
   return (
     <div className="flex bg-[url('/assets/background.jpeg')] relative pb-10">
       <div className="flex flex-col w-full mx-5 sm:mx-8 2xl:mx-20">
         <div className="flex flex-col mt-6 px-7 py-8 bg-base-200 opacity-80 rounded-2xl shadow-lg border-2 border-primary">
-          <span className="text-4xl sm:text-6xl text-black">Hoard USDC</span>
+          <span className="text-4xl sm:text-6xl text-black">Increase Your Hoard</span>
+
           <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-5">
             <input
               type="text"
@@ -29,7 +29,7 @@ export const Hoard = () => {
                     onClick={async () => {
                       try {
                         if (amount !== undefined) {
-                          await writeContractAsync({ functionName: "Hoard", args: [BigInt(amount)] });
+                          await writeContractAsync({ functionName: "IncreaseHoard", args: [BigInt(amount)] });
                         }
                       } catch (err) {
                         console.error("Error calling execute function");
