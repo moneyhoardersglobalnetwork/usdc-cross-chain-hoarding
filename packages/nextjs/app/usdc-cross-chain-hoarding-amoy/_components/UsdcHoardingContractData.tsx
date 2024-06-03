@@ -190,7 +190,7 @@ export const UsdcHoardingContractData = () => {
         <div className="bg-accent border border-primary rounded-xl flex">
           <div className="p-2 py-1 border-r border-primary flex items-top w-min">Hoarding Time in Seconds</div>
           <div className="text-2xl text-right min-w-[3rem] px-2 py-1 flex justify-end font-bai-jamjuree">
-            {GetHoardingingTimeInSeconds?.toString() || "0"}
+          {Number.parseFloat(formatUnits(GetHoardingingTimeInSeconds || "0", 0))}
           </div>
         </div>
         <div></div>
