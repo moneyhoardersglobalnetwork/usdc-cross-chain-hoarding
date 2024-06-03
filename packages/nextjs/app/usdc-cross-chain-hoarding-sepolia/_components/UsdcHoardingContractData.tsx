@@ -1,17 +1,18 @@
 "use client";
+
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
-import { formatEther } from "ethers";
+import { formatEther, formatUnits } from "ethers";
 import { useAccount } from "wagmi";
 import {
   useScaffoldContract,
-  useScaffoldReadContract,
-  useScaffoldWriteContract,
   useScaffoldEventHistory,
+  useScaffoldReadContract,
   useScaffoldWatchContractEvent,
+  useScaffoldWriteContract,
 } from "~~/hooks/scaffold-eth";
-import React from "react";
 
 export const UsdcHoardingContractData = () => {
   const { address } = useAccount();
@@ -115,7 +116,7 @@ export const UsdcHoardingContractData = () => {
         </div>
         This is the USDC Cross-Chain Hoarding User Interface
         <div className="flex relative w-40 h-40">
-          <Image alt="USDC logo" className="cursor-pointer"  src="/usdc-logo.png" width={120} height={100} />
+          <Image alt="USDC logo" className="cursor-pointer" src="/usdc-logo.png" width={120} height={100} />
         </div>
       </div>
       <p>
@@ -123,8 +124,8 @@ export const UsdcHoardingContractData = () => {
         <div className="text-xl text-accent">
           Your wallet balance:{" "}
           <div className="inline-flex items-center justify-center text-white">
-          {usdcTokenBalance?.toString() || "0"}
-            <span className="font-bold ml-1">{usdcTokenSymbol}</span>
+            {Number.parseFloat(formatUnits(usdcTokenBalance || "0", 6))}
+            <span className="font-bold ml-1">USDC</span>
           </div>
         </div>
       </p>
@@ -133,8 +134,8 @@ export const UsdcHoardingContractData = () => {
         <div className="text-xl text-accent">
           Hoarding Contract Allowance:{" "}
           <div className="inline-flex items-center justify-center text-white">
-            {usdcTokenAllowance?.toString() || "0"}
-            <span className="font-bold ml-1">{usdcTokenSymbol}</span>
+            {Number.parseFloat(formatUnits(usdcTokenAllowance || "0", 6))}
+            <span className="font-bold ml-1">USDC</span>
           </div>
         </div>
       </p>
@@ -143,8 +144,8 @@ export const UsdcHoardingContractData = () => {
         <div className="text-xl text-accent">
           You Hoarded:{" "}
           <div className="inline-flex items-center justify-center text-white">
-            {hoardingBalance?.toString() || "0"}
-            <span className="font-bold ml-1">{usdcTokenSymbol}</span>
+            {Number.parseFloat(formatUnits(hoardingBalance || "0", 6))}
+            <span className="font-bold ml-1">USDC</span>
           </div>
         </div>
       </p>
@@ -158,13 +159,13 @@ export const UsdcHoardingContractData = () => {
         <div className="bg-accent border border-primary rounded-xl flex">
           <div className="p-2 py-1 border-r border-primary flex items-top w-min">Total Reward Pool</div>
           <div className="text-2xl text-right min-w-[3rem] px-2 py-1 flex justify-end font-bai-jamjuree">
-            {Total_Reward_Pool?.toString() || "0"}
+            {Number.parseFloat(formatUnits(Total_Reward_Pool || "0", 6))}
           </div>
         </div>
         <div className="bg-accent border border-primary rounded-xl flex">
           <div className="p-2 py-1 border-r border-primary flex items-top w-min">Total Hoarded</div>
           <div className="text-2xl text-right min-w-[3rem] px-2 py-1 flex justify-end font-bai-jamjuree">
-            {hoarded?.toString() || "0"}
+            {Number.parseFloat(formatUnits(hoarded || "0", 6))}
           </div>
         </div>
         <div className="bg-accent border border-primary rounded-xl flex">
@@ -178,7 +179,7 @@ export const UsdcHoardingContractData = () => {
             <div className="bg-accent border border-primary rounded-xl flex">
               <div className="p-2 py-1 border-r border-primary flex items-top w-min">Total Supply</div>
               <div className="text-2xl text-right min-w-[3rem] px-2 py-1 flex justify-end font-bai-jamjuree">
-                {totalSupply?.toString() || "0"}
+                {Number.parseFloat(formatUnits(totalSupply || "0", 6))}
               </div>
             </div>
           </div>
@@ -189,7 +190,7 @@ export const UsdcHoardingContractData = () => {
         <div className="bg-accent border border-primary rounded-xl flex">
           <div className="p-2 py-1 border-r border-primary flex items-top w-min">Hoarding Time in Seconds</div>
           <div className="text-2xl text-right min-w-[3rem] px-2 py-1 flex justify-end font-bai-jamjuree">
-            {GetHoardingingTimeInSeconds?.toString() || "0"}
+            {Number.parseFloat(formatUnits(GetHoardingingTimeInSeconds || "0", 0))}
           </div>
         </div>
         <div></div>
@@ -197,7 +198,7 @@ export const UsdcHoardingContractData = () => {
           <div className="bg-accent border border-primary rounded-xl flex">
             <div className="p-2 py-1 border-r border-primary flex items-top w-min">Pending Rewards</div>
             <div className="text-2xl text-right min-w-[3rem] px-2 py-1 flex justify-end font-bai-jamjuree">
-              {calculateReward?.toString() || "0"}
+            {Number.parseFloat(formatUnits(calculateReward || "0", 6))}
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ export const TransferUsdc = () => {
   const [visible, setVisible] = useState(true);
   const [amount, setAmount] = useState<string | undefined>(undefined);
   const [address, setAddress] = useState<string | undefined>(undefined);
-  const { writeContractAsync } = useScaffoldWriteContract("UsdcCrossChainHoardingAmoy");
+  const { writeContractAsync } = useScaffoldWriteContract("UsdcCrossChainHoardingFuji");
 
   return (
     <div className="flex bg-[url('/assets/background.jpeg')] relative pb-10">

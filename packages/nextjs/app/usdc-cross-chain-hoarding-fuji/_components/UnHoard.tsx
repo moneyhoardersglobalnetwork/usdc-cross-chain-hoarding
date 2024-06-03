@@ -7,7 +7,7 @@ import React from "react";
 export const UnHoard = () => {
   const [visible, setVisible] = useState(true);
   const [amount, setAmount] = useState<string | undefined>(undefined);
-  const { writeContractAsync } = useScaffoldWriteContract("UsdcCrossChainHoardingAmoy");
+  const { writeContractAsync } = useScaffoldWriteContract("UsdcCrossChainHoardingFuji");
 
  
 

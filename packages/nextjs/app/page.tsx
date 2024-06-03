@@ -22,19 +22,22 @@ const Home: NextPage = () => {
             <Address address={connectedAddress} />
           </div>
           <p className="text-center text-lg">
-            Get started by editing{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/nextjs/app/page.tsx
-            </code>
+            Get started on Polygon Amoy{" "}
+            <div>
+              <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
+                You can now hoard your USDC across chains! And make tranfers across chains
+              </code>
+            </div>
           </p>
           <p className="text-center text-lg">
-            Edit your smart contract{" "}
+            This application is still in development. If you have any questions, please reach out to MHGN Hoarder Labs{" "}
+            <div>
+              <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
+                There are 3 different chains you can interact with: Polygon Amoy, Ethereum Sepolia, and Avalanche Fuji.
+              </code>{" "}
+            </div>
             <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              YourContract.sol
-            </code>{" "}
-            in{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/hardhat/contracts
+              To switch interfaces you must be hosting locally and change target network in scaffold.config.ts
             </code>
           </p>
         </div>
@@ -44,10 +47,12 @@ const Home: NextPage = () => {
             <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
               <BugAntIcon className="h-8 w-8 fill-secondary" />
               <p>
-                Tinker with your smart contract using the{" "}
-                <Link href="/debug" passHref className="link">
-                  Debug Contracts
-                </Link>{" "}
+                You can access the contracts directly on each chain in{" "}
+                <div>
+                  <Link href="/debug" passHref className="link">
+                    Debug Contracts
+                  </Link>{" "}
+                </div>
                 tab.
               </p>
             </div>

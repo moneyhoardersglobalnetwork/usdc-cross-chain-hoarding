@@ -9,7 +9,7 @@ import React from "react";
 export const ApproveUsdc = () => {
   const [visible, setVisible] = useState(true);
   const [amount, approve_amount] = useState("");
-  const address = "0xfd8Ff2c739DD3dc566C6f7A060bB69663e7dA8Bc";
+  const address = "0x955E9073bb8B9b965B8Ce3c52aD32C7b7D71a069";
   const { writeContractAsync } = useScaffoldWriteContract("IERC20");
 
 

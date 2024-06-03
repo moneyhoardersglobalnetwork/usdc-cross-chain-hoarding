@@ -19,7 +19,7 @@ export const ContractInteraction = () => {
             <div>
               <div>
                 In this page you can interact with the <strong>USDC Token</strong> quickly import to your wallet using
-                the contract address 0x036CbD53842c5426634e7929541eC2318f3dCF7e
+                the contract address 0x5425890298aed601595a70AB815c96711a31Bc65
               </div>
               <div className="mt-2">
                 Remember <code className="italic bg-base-300 text-base font-bold [word-spacing:-0.5rem]">USDC</code> has
